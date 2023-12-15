@@ -19,6 +19,7 @@ import com.hubspot.api.model.UserSessions;
 @Service
 public class ProcessEventServiceImpl implements ProcessEventService {
 
+  private static int MIN_WINDOW = 600000;
   
   Logger LOG = LoggerFactory.getLogger(ProcessEventServiceImpl.class);
 
@@ -74,7 +75,7 @@ public class ProcessEventServiceImpl implements ProcessEventService {
     
           int j = i + 1;
     
-          while (j < events.size() && events.get(j).getDateVisited() - startTime <= 600000) {
+          while (j < events.size() && events.get(j).getDateVisited() - startTime <= MIN_WINDOW) {
             pages.add(events.get(j).getUrl());
             userSession.setDuration(Math.abs(events.get(j).getDateVisited() - startTime));
             j++;
