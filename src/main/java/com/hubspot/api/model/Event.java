@@ -12,5 +12,7 @@ import lombok.Setter;
 public class Event {
     private String url;
     private String visitorId;
+    // timestamps should be mapped as long to be transformed later 
+    //into Date or other date/time class
     private long dateVisited;
 }

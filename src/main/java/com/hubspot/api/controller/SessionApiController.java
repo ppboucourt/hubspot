@@ -62,6 +62,6 @@ public class SessionApiController {
         }
         return ResponseEntity.
         status(HttpStatus.OK).
-        body("Events processed successfully\n");;
+        body("Events processed successfully\n");
     }
 }
