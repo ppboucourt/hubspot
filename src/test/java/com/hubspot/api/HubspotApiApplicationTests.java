@@ -1,13 +1,13 @@
-package java.com.hubspot.assessment;
+package com.hubspot.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AssessmentApplicationTests {
+class HubspotApiApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
